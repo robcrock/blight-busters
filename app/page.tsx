@@ -36,7 +36,6 @@ function App() {
 
       // Wait for map to load before adding markers
       map.on('load', () => {
-        //console.log('Map loaded')
         setMapLoaded(true)
 
         const points = getServiceIncidents();
@@ -45,24 +44,20 @@ function App() {
         points.forEach(point => {
           // Create a default marker
           const marker = new mapboxgl.Marker()
-            .setLngLat([Number(point.Coordinates.longitude), Number(point.Coordinates.latitude)])
+            .setLngLat([Number(point.Coordinates?.longitude), Number(point.Coordinates?.latitude)])
             .addTo(map);
 
           // Add click event to the marker element
           const markerElement = marker.getElement();
           markerElement.addEventListener('click', () => {
-            //console.log('Clicked point:', point);
             router.push(`/submit/${point.INCIDENT_ID}`);
           });
 
           // Add a mouseenter event listener to show the tooltip 
-          markerElement.addEventListener('mouseenter', () => { const popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false }) .setLngLat([Number(point.Coordinates.longitude), Number(point.Coordinates.latitude)]) 
-            .setHTML(`<div><p>Category: ${point.CATEGORY}</p><p>Incident ID: ${point.INCIDENT_ID}</p><p>Points: 25</p></div>`) .addTo(map); 
+          markerElement.addEventListener('mouseenter', () => { const popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false }) .setLngLat([Number(point.Coordinates?.longitude), Number(point.Coordinates?.latitude)]) 
+            .setHTML(`<div><p>Status: ${point.Status}</p><p>Category: ${point.CATEGORY}</p><p>Incident ID: ${point.INCIDENT_ID}</p><p>Points: ${point.Points}</p></div>`) .addTo(map); 
           markerElement.addEventListener('mouseleave', () => { popup.remove(); }); });
-
         });
-
-        //console.log('Added markers for points:', points);
       });
 
     } catch (error) {
