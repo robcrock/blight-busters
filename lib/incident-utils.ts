@@ -3,7 +3,6 @@ import { ServiceIncident } from "@/types/ServiceIncident";
 import serviceIncidentData from "@/data/incidentData";
 
 export function getServiceIncidents(): ServiceIncident[] {
-  console.log("Service Data", serviceIncidentData)
   const serviceRequestList: ServiceIncident[] = serviceIncidentData.map(request => ({
     ...request,
     Coordinates: parseCoordinates(request.Location_1),

@@ -36,7 +36,6 @@ function App() {
 
       // Wait for map to load before adding markers
       map.on('load', () => {
-        //console.log('Map loaded')
         setMapLoaded(true)
 
         const points = getServiceIncidents();
@@ -51,7 +50,6 @@ function App() {
           // Add click event to the marker element
           const markerElement = marker.getElement();
           markerElement.addEventListener('click', () => {
-            //console.log('Clicked point:', point);
             router.push(`/submit/${point.INCIDENT_ID}`);
           });
 
