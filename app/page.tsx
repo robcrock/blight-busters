@@ -3,9 +3,12 @@
 import { useRef, useEffect, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { useRouter } from 'next/navigation';  // Changed from next/router to next/navigation
+import {getServiceIncidents} from '@/lib/incident-utils';
 
 function App() {
-  const mapRef = useRef(null)
+  const router = useRouter();
+  const mapRef = useRef<mapboxgl.Map | null>(null)
   const mapContainerRef = useRef(null)
   const [mapLoaded, setMapLoaded] = useState(false)
 
@@ -14,8 +17,12 @@ function App() {
       mapboxgl.accessToken = 'pk.eyJ1IjoicmNyb2NrZXIxMyIsImEiOiIxcWJvcnNvIn0.k2YpWuQ5oL8qpnoL5BQ0pg'
     }
     
-    // Return early if map is already initialized
     if (mapRef.current) return;
+
+    if (!mapContainerRef.current) {
+      console.error('Map container element not found');
+      return;
+    }
 
     try {
       const map = new mapboxgl.Map({
@@ -24,18 +31,32 @@ function App() {
         center: [-90.0515, 35.1495],
         zoom: 9
       });
-
-      // Save map instance
+      
       mapRef.current = map;
 
-      // Handle both map load and style load
-      map.on('style.load', () => {
-        console.log('Style loaded')
+      // Wait for map to load before adding markers
+      map.on('load', () => {
+        console.log('Map loaded')
         setMapLoaded(true)
-      });
 
-      map.on('error', (e) => {
-        console.error('Mapbox error:', e)
+        const points = getServiceIncidents();
+        
+        // Add markers
+        points.forEach(point => {
+          // Create a default marker
+          const marker = new mapboxgl.Marker()
+            .setLngLat([Number(point.Coordinates.longitude), Number(point.Coordinates.latitude)])
+            .addTo(map);
+
+          // Add click event to the marker element
+          const markerElement = marker.getElement();
+          markerElement.addEventListener('click', () => {
+            console.log('Clicked point:', point);
+            router.push(`/submit/${point.INCIDENT_ID}`);
+          });
+        });
+
+        console.log('Added markers for points:', points);
       });
 
     } catch (error) {
@@ -48,7 +69,7 @@ function App() {
         mapRef.current = null
       }
     }
-  }, [])
+  }, [router])
 
   return (
     <div className="relative">
