@@ -40,6 +40,7 @@ function SubmitPage({ params }: { params: SubmitPageParams }) {
         </section>
         <section className="m-8 p-0">
           <div className="flex flex-col items-center justify-center w-full">
+            {!imageSrc &&
             <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                     <Image src={FileUpload} alt="File Upload" />
@@ -47,10 +48,11 @@ function SubmitPage({ params }: { params: SubmitPageParams }) {
                 </div>
                 <input id="dropzone-file" type="file" width={20} className="hidden" ref={fileInputRef} onChange={handleFileChange} />
             </label>
-            {imageSrc && <Image src={imageSrc} alt="Uploaded Image" width={100} height={100} className='w-full mt-16'/>}
+            }
+            {imageSrc && <Image src={imageSrc} alt="Uploaded Image" width={100} height={100} className='w-full'/>}
           </div> 
         </section>
-          <Link href={`/`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full text-center">Submit</Link>
+        <Link href={`/`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-3/4 mx-auto text-center">Submit</Link>
       </main>
     );
   }
