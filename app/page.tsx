@@ -36,7 +36,7 @@ function App() {
 
       // Wait for map to load before adding markers
       map.on('load', () => {
-        console.log('Map loaded')
+        //console.log('Map loaded')
         setMapLoaded(true)
 
         const points = getServiceIncidents();
@@ -51,12 +51,17 @@ function App() {
           // Add click event to the marker element
           const markerElement = marker.getElement();
           markerElement.addEventListener('click', () => {
-            console.log('Clicked point:', point);
+            //console.log('Clicked point:', point);
             router.push(`/submit/${point.INCIDENT_ID}`);
           });
+
+          // Add a mouseenter event listener to show the tooltip 
+          markerElement.addEventListener('mouseenter', () => { const popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false }) .setLngLat([Number(point.Coordinates.longitude), Number(point.Coordinates.latitude)]) .setHTML(`<strong>${point.CATEGORY}</strong>`) .addTo(map); 
+          markerElement.addEventListener('mouseleave', () => { popup.remove(); }); });
+
         });
 
-        console.log('Added markers for points:', points);
+        //console.log('Added markers for points:', points);
       });
 
     } catch (error) {
