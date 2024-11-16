@@ -56,7 +56,8 @@ function App() {
           });
 
           // Add a mouseenter event listener to show the tooltip 
-          markerElement.addEventListener('mouseenter', () => { const popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false }) .setLngLat([Number(point.Coordinates.longitude), Number(point.Coordinates.latitude)]) .setHTML(`<strong>${point.CATEGORY}</strong>`) .addTo(map); 
+          markerElement.addEventListener('mouseenter', () => { const popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false }) .setLngLat([Number(point.Coordinates.longitude), Number(point.Coordinates.latitude)]) 
+            .setHTML(`<div><p>Category: ${point.CATEGORY}</p><p>Incident ID: ${point.INCIDENT_ID}</p><p>Points: 25</p></div>`) .addTo(map); 
           markerElement.addEventListener('mouseleave', () => { popup.remove(); }); });
 
         });
