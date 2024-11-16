@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import Swal from 'sweetalert2'
+import Arrow from '../../images/arrow.png';
 
 interface SubmitPageParams {
   id: string; // or number, depending on the type of id
@@ -26,14 +27,9 @@ function SubmitPage({ params }: { params: SubmitPageParams }) {
   };
 
   const submit = () => {
-    // Swal.fire({
-    //   text: "Image submitted successfully!  Thank you",
-    //   icon: "success"
-    // });
-
     const Toast = Swal.mixin({
       toast: true,
-      position: "center-start",
+      position: "center",
       showConfirmButton: false,
       timer: 4000,
       timerProgressBar: true,
@@ -43,7 +39,7 @@ function SubmitPage({ params }: { params: SubmitPageParams }) {
       }
       });
       Toast.fire({
-          icon: "error",
+          icon: "success",
           title: "Image submitted successfully!  Thank you"
   });
   };
@@ -52,7 +48,9 @@ function SubmitPage({ params }: { params: SubmitPageParams }) {
   
     return (
       <main className="flex min-h-screen flex-col ">
-
+        <section>
+          <Link href="/"><Image src={Arrow} alt="File Upload" className='rotate-180 ml-4 mt-4' width={20} height={20} /></Link>
+        </section>
         <section className="flex flex-row gap-4 p-8">
           <div className="flex-1 flex flex-col gap-4 ">
             <p className="font-bold">Case Id: M-JK-23456789</p>
