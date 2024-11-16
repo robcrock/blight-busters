@@ -3,6 +3,7 @@ import FileUpload from '../../images/upload-1.png';
 import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import Link from 'next/link';
+import Swal from 'sweetalert2'
 
 interface SubmitPageParams {
   id: string; // or number, depending on the type of id
@@ -22,6 +23,29 @@ function SubmitPage({ params }: { params: SubmitPageParams }) {
         console.log(imageSrc)
         console.log("done")
     }
+  };
+
+  const submit = () => {
+    // Swal.fire({
+    //   text: "Image submitted successfully!  Thank you",
+    //   icon: "success"
+    // });
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "center-start",
+      showConfirmButton: false,
+      timer: 4000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+      }
+      });
+      Toast.fire({
+          icon: "error",
+          title: "Image submitted successfully!  Thank you"
+  });
   };
 
   
@@ -52,7 +76,7 @@ function SubmitPage({ params }: { params: SubmitPageParams }) {
             {imageSrc && <Image src={imageSrc} alt="Uploaded Image" width={100} height={100} className='w-full'/>}
           </div> 
         </section>
-        <Link href={`/`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-3/4 mx-auto text-center">Submit</Link>
+        <Link onClick={submit} href={`/`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-3/4 mx-auto text-center">Submit</Link>
       </main>
     );
   }
