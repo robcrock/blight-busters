@@ -1,6 +1,6 @@
 import { Coordinates } from "@/types/Coordinates";
 import { ServiceIncident } from "@/types/ServiceIncident";
-import serviceIncidentData from "@/data/Open311ServiceRequestData.json";
+import serviceIncidentData from "@/data/incidentData";
 
 export function getServiceIncidents(): ServiceIncident[] {
   console.log("Service Data", serviceIncidentData)
@@ -18,5 +18,5 @@ function parseCoordinates(location: string): Coordinates | null {
     const [_, longitude, latitude] = match;
     return { longitude, latitude };
   }
-  return null;
+  return { longitude: "0", latitude: "0" };
 }

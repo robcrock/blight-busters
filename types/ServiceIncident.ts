@@ -49,5 +49,7 @@ export interface ServiceIncident {
   ZONE: string | null;
   Location_1: string | null;
   "100_Block_Coordinates": string | null;
-  Coordinates: Coordinates;
+  Coordinates: Coordinates | null;
+  Status: string;
+  Points: number;
 }
