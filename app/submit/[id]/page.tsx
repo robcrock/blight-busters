@@ -4,7 +4,6 @@ import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import Swal from 'sweetalert2'
-import Arrow from '@/public/images/arrow.png';
 
 interface SubmitPageParams {
   id: string; // or number, depending on the type of id
@@ -20,9 +19,7 @@ function SubmitPage({ params }: { params: SubmitPageParams }) {
       const reader = new FileReader(); 
       reader.onload = (e) => { 
         setImageSrc(e.target?.result as string); }; 
-        reader.readAsDataURL(file); 
-        console.log(imageSrc)
-        console.log("done")
+        reader.readAsDataURL(file);
     }
   };
 
@@ -48,12 +45,9 @@ function SubmitPage({ params }: { params: SubmitPageParams }) {
   
     return (
       <main className="flex min-h-screen flex-col ">
-        <section>
-          <Link href="/"><Image src={Arrow} alt="File Upload" className='rotate-180 ml-4 mt-4' width={20} height={20} /></Link>
-        </section>
         <section className="flex flex-row gap-4 p-8">
           <div className="flex-1 flex flex-col gap-4 ">
-            <p className="font-bold">Case Id: M-JK-23456789</p>
+            <p className="font-bold">Case Id #{params.id}</p>
             <p>Case catergory: Junk Yard</p>
             <p>Latitude: 38.8951</p>
             <p>Longitude: -77.0364</p>

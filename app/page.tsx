@@ -73,11 +73,11 @@ function App() {
   }, [router])
 
   return (
-    <div className="relative">
+    <div className="relative h-screen w-screen">
       <div 
         ref={mapContainerRef}
         style={{ 
-          height: '500px',
+          height: '100%',
           width: '100%'
         }}
       />
