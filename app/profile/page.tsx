@@ -21,9 +21,9 @@ function ProfilePage() {
       {/* Current Points */}
       <div className="w-[80%]">
         <div className="relative inline-flex items-center justify-between w-full mt-8 mb-6">
-          <div className="inline-flex">
+          <div className="flex flex-col md:flex-row w-full">
             <h2 className="text-indigo-500 font-semibold text-xl mr-2">Current points</h2>
-            <span className="text-gray-500 mt-[2px]">as of 11/17/2024</span>
+            <span className="text-gray-500 text-sm md:mt-[6px]">as of 11/17/2024</span>
           </div>
           <span className="text-indigo-500 font-bold text-5xl">75</span>
         </div>
