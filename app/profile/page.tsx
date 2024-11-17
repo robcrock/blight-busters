@@ -2,16 +2,11 @@ import { Slider } from "@/components/ui/slider"
 
 import ProfileImage from "@/components/ProfileImage";
 import Image from "next/image";
-import Link from "next/link";
-import Arrow from "@/public/images/arrow.png"
 
 function ProfilePage() {
   
   return (
-    <div className="flex flex-col items-center mt-4">
-      <div className="w-full relative">
-        <Link href="/"><Image src={Arrow} alt="Go to Map" className=' absolute rotate-180 ml-4' width={20} height={20} /></Link>
-      </div>
+    <div className="flex flex-col items-center mt-2">
       {/* Profile Header */}
       <div className="relative mt-6">
         <ProfileImage src="/images/profile_pic.jpeg" alt="Mayor Young" size={100} />
