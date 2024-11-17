@@ -1,16 +1,19 @@
-import { cn } from "@/lib/utils"
 import { Slider } from "@/components/ui/slider"
 
 import ProfileImage from "@/components/ProfileImage";
 import Image from "next/image";
+import Link from "next/link";
+import Arrow from "@/public/images/arrow.png"
 
 function ProfilePage() {
   
   return (
-    <div className="flex flex-col items-center mt-6">
-      
+    <div className="flex flex-col items-center mt-4">
+      <div className="w-full relative">
+        <Link href="/"><Image src={Arrow} alt="Go to Map" className=' absolute rotate-180 ml-4' width={20} height={20} /></Link>
+      </div>
       {/* Profile Header */}
-      <div className="relative">
+      <div className="relative mt-6">
         <ProfileImage src="/images/profile_pic.jpeg" alt="Mayor Young" size={100} />
         <div className="absolute bottom-2 shadow-md left-1/2 transform -translate-x-1/2 translate-y-1/2 rounded-full border border-black w-[35px] h-[35px] flex items-center justify-center bg-white">
           <span className="font-bold text-2xl text-center">
@@ -44,7 +47,7 @@ function ProfilePage() {
 
       {/* Incident Data */}
       <div className="w-[80%] items-center mt-4">
-      <h2 className="font-semibold mt-8 text-2xl text-center mb-4">Submitted incidents</h2>
+      <h2 className="font-semibold mt-8 text-2xl text-center mb-4">Submitted Incidents</h2>
       <div className="rounded-sm shadow-md border inline-flex items-center justify-between w-full h-20 px-6 mb-4">
         <h3 className="text-2xl">Approved</h3>
         <span className="text-indigo-500 font-bold text-5xl">10</span>
