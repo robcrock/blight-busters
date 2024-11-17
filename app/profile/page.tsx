@@ -25,16 +25,16 @@ function ProfilePage() {
             <h2 className="text-indigo-500 font-semibold text-xl mr-2">Current points</h2>
             <span className="text-gray-500 mt-[2px]">as of 11/17/2024</span>
           </div>
-          <span className="text-indigo-500 font-bold text-5xl">25</span>
+          <span className="text-indigo-500 font-bold text-5xl">75</span>
         </div>
-        <Slider disabled defaultValue={[25]} min={5} max={100} step={1} />
+        <Slider disabled defaultValue={[75]} min={5} max={100} step={1} />
         <div className="relative inline-flex items-center justify-between w-full mt-2">
           <span>5</span>
           <span className="text-green-600">100</span>
         </div>
         <div className="relative inline-flex items-center">
           <span className="text-gray-500 text-sm">
-            75 points needed for the next
+            25 points needed for the next
           </span>
           <Image src={"/images/medal.png"} alt="Badge" width={20} height={20}></Image>
         </div>

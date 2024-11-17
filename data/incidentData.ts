@@ -49,7 +49,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.98238 35.17514)",
         "100_Block_Coordinates":"POINT (-89.98238 35.17514)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -102,7 +102,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.88286 35.21266)",
         "100_Block_Coordinates":"POINT (-89.88286 35.21266)",
-        "Points":3,
+        "Points":25,
         "Status": "OPEN"
     },
     {
@@ -155,7 +155,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.9733 35.1809)",
         "100_Block_Coordinates":"POINT (-89.9733 35.1809)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -208,7 +208,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-90.07466 35.05102)",
         "100_Block_Coordinates":"POINT (-90.07466 35.05102)",
-        "Points":3,
+        "Points":25,
         "Status": "OPEN"
     },
     {
@@ -261,7 +261,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-90.03569 35.16265)",
         "100_Block_Coordinates":"POINT (-90.03569 35.16265)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -314,7 +314,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.95962 35.13201)",
         "100_Block_Coordinates":"POINT (-89.95962 35.13201)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -367,7 +367,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.9778 35.15238)",
         "100_Block_Coordinates":"POINT (-89.9778 35.15238)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -420,7 +420,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.97217 35.09729)",
         "100_Block_Coordinates":"POINT (-89.97217 35.09729)",
-        "Points":3,
+        "Points":25,
         "Status": "OPEN"
     },
     {
@@ -473,7 +473,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.97246 35.22224)",
         "100_Block_Coordinates":"POINT (-89.97246 35.22224)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -526,7 +526,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.87415 35.07162)",
         "100_Block_Coordinates":"POINT (-89.87415 35.07162)",
-        "Points":3,
+        "Points":25,
         "Status": "OPEN"
     },
     {
@@ -579,7 +579,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-90.06546 35.06182)",
         "100_Block_Coordinates":"POINT (-90.06546 35.06182)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -632,7 +632,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-90.01113 35.21894)",
         "100_Block_Coordinates":"POINT (-90.01113 35.21894)",
-        "Points":3,
+        "Points":25,
         "Status": "OPEN"
     },
     {
@@ -685,7 +685,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.84917 35.03952)",
         "100_Block_Coordinates":"POINT (-89.84917 35.03952)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -738,7 +738,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.95936 35.19993)",
         "100_Block_Coordinates":"POINT (-89.95936 35.19993)",
-        "Points":3,
+        "Points":25,
         "Status": "OPEN"
     },
     {
@@ -791,7 +791,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.85284 35.16316)",
         "100_Block_Coordinates":"POINT (-89.85284 35.16316)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -844,7 +844,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-90.0807 35.06197)",
         "100_Block_Coordinates":"POINT (-90.0807 35.06197)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -897,7 +897,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.795874506 35.135912307)",
         "100_Block_Coordinates":"POINT (-89.795874506 35.135912307)",
-        "Points":3,
+        "Points":25,
         "Status": "OPEN"
     },
     {
@@ -950,7 +950,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.97937 35.08606)",
         "100_Block_Coordinates":"POINT (-89.97937 35.08606)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -1003,7 +1003,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-90.03396 35.11524)",
         "100_Block_Coordinates":"POINT (-90.03396 35.11524)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -1056,7 +1056,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.98419 35.10171)",
         "100_Block_Coordinates":"POINT (-89.98419 35.10171)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -1109,7 +1109,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.96514 35.01229)",
         "100_Block_Coordinates":"POINT (-89.96514 35.01229)",
-        "Points":3,
+        "Points":25,
         "Status": "OPEN"
     },
     {
@@ -1162,7 +1162,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-90.04389 35.02972)",
         "100_Block_Coordinates":"POINT (-90.04389 35.02972)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -1215,7 +1215,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-90.026506973 35.135419017)",
         "100_Block_Coordinates":"POINT (-90.026506973 35.135419017)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -1268,7 +1268,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.92526 35.0739)",
         "100_Block_Coordinates":"POINT (-89.92526 35.0739)",
-        "Points":3,
+        "Points":25,
         "Status": "OPEN"
     },
     {
@@ -1321,7 +1321,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.93689 35.25403)",
         "100_Block_Coordinates":"POINT (-89.93689 35.25403)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -1374,7 +1374,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-90.0518 35.13148)",
         "100_Block_Coordinates":"POINT (-90.0518 35.13148)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -1427,7 +1427,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.78482 35.1513)",
         "100_Block_Coordinates":"POINT (-89.78482 35.1513)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -1480,7 +1480,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-90.01572 35.20315)",
         "100_Block_Coordinates":"POINT (-90.01572 35.20315)",
-        "Points":3,
+        "Points":25,
         "Status": "OPEN"
     },
     {
@@ -1533,7 +1533,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.9547 35.21633)",
         "100_Block_Coordinates":"POINT (-89.9547 35.21633)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     },
     {
@@ -1586,7 +1586,7 @@ const serviceIncidentData = [
         "ZONE":null,
         "Location_1":"POINT (-89.97114 35.09304)",
         "100_Block_Coordinates":"POINT (-89.97114 35.09304)",
-        "Points":5,
+        "Points":15,
         "Status": "OPEN"
     }
 ] 
