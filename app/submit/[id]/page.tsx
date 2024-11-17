@@ -1,10 +1,10 @@
 'use client'
-import FileUpload from '../../images/upload-1.png';
+import FileUpload from '@/public/images/upload-1.png';
 import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import Swal from 'sweetalert2'
-import Arrow from '../../images/arrow.png';
+import Arrow from '@/public/images/arrow.png';
 
 interface SubmitPageParams {
   id: string; // or number, depending on the type of id
