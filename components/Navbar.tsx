@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
   const currentPath = usePathname();
   
   return (
-    <div className="sticky top-0 w-full flex items-center justify-between bg-white shadow-md p-4">
+    <div className="sticky top-0 w-full flex items-center justify-between bg-white shadow-md p-4 z-50">
       <div>
         {currentPath !== '/' && (
           <Link href="/">

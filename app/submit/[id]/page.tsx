@@ -4,6 +4,8 @@ import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import Swal from 'sweetalert2'
+import { getServiceIncidents } from '@/lib/incident-utils';
+import { ServiceIncident } from '@/types/ServiceIncident';
 
 interface SubmitPageParams {
   id: string; // or number, depending on the type of id
@@ -12,6 +14,10 @@ interface SubmitPageParams {
 function SubmitPage({ params }: { params: SubmitPageParams }) {
   const fileInputRef = useRef<HTMLInputElement>(null); 
   const [imageSrc, setImageSrc] = useState<string | null>(null);
+
+  const caseSelected: ServiceIncident[] = getServiceIncidents().filter(
+    (incident) => incident.INCIDENT_ID === Number(params.id)
+  );
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => { 
     const file = event.target.files && event.target.files[0]; 
@@ -47,12 +53,12 @@ function SubmitPage({ params }: { params: SubmitPageParams }) {
       <main className="flex min-h-screen flex-col ">
         <section className="flex flex-row gap-4 p-8">
           <div className="flex-1 flex flex-col gap-4 ">
-            <p className="font-bold">Case Id #{params.id}</p>
-            <p>Case catergory: Junk Yard</p>
-            <p>Latitude: 38.8951</p>
-            <p>Longitude: -77.0364</p>
+            <p className="font-bold text-2xl text-indigo-500">Case Id #{params.id}</p>
+            <p>Case category: {caseSelected[0].CATEGORY}</p>
+            <p>Latitude: {caseSelected[0].Coordinates?.latitude}</p>
+            <p>Longitude: {caseSelected[0].Coordinates?.longitude}</p>
           </div>        
-          <div className="rounded-full bg-gray-200 flex items-center justify-center w-20 h-20 font-bold ">+25</div>
+          <div className="flex items-center justify-center w-20 h-20 font-bold text-indigo-500 text-4xl">+{caseSelected[0].Points}</div>
         </section>
         <section className="m-8 p-0">
           <div className="flex flex-col items-center justify-center w-full">
