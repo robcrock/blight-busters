@@ -42,19 +42,19 @@ function ProfilePage() {
 
       {/* Incident Data */}
       <div className="w-[80%] items-center mt-4">
-      <h2 className="font-semibold mt-8 text-2xl text-center mb-4">Submitted Incidents</h2>
-      <div className="rounded-sm shadow-md border inline-flex items-center justify-between w-full h-20 px-6 mb-4">
-        <h3 className="text-2xl">Approved</h3>
-        <span className="text-indigo-500 font-bold text-5xl">10</span>
-      </div>
-      <div className="rounded-sm shadow-md border inline-flex items-center justify-between w-full h-20 px-6 mb-4">
-        <h3 className="text-2xl">Review in progress</h3>
-        <span className="text-yellow-300 font-bold text-5xl">3</span>
-      </div>
-      <div className="rounded-sm shadow-md border inline-flex items-center justify-between w-full h-20 px-6">
-        <h3 className="text-2xl">Revisions Needed</h3>
-        <span className="text-red-400 font-bold text-5xl">6</span>
-      </div>
+        <h2 className="font-semibold mt-8 text-2xl text-center mb-4">Submitted Incidents</h2>
+        <div className="rounded-sm shadow-md border inline-flex items-center justify-between w-full h-20 px-6 mb-4">
+          <h3 className="text-2xl">Approved</h3>
+          <span className="text-indigo-500 font-bold text-5xl">10</span>
+        </div>
+        <div className="rounded-sm shadow-md border inline-flex items-center justify-between w-full h-20 px-6 mb-4">
+          <h3 className="text-2xl">Review in progress</h3>
+          <span className="text-yellow-300 font-bold text-5xl">3</span>
+        </div>
+        <div className="rounded-sm shadow-md border inline-flex items-center justify-between w-full h-20 px-6 mb-6">
+          <h3 className="text-2xl">Revisions Needed</h3>
+          <span className="text-red-400 font-bold text-5xl">6</span>
+        </div>
       </div>
     </div>
   );
