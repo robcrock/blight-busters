@@ -53,10 +53,19 @@ function App() {
             router.push(`/submit/${point.INCIDENT_ID}`);
           });
 
-          // Add a mouseenter event listener to show the tooltip 
-          markerElement.addEventListener('mouseenter', () => { const popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false }) .setLngLat([Number(point.Coordinates?.longitude), Number(point.Coordinates?.latitude)]) 
-            .setHTML(`<div><p>Status: ${point.Status}</p><p>Category: ${point.CATEGORY}</p><p>Incident ID: ${point.INCIDENT_ID}</p><p>Points: ${point.Points}</p></div>`) .addTo(map); 
-          markerElement.addEventListener('mouseleave', () => { popup.remove(); }); });
+          markerElement.addEventListener('mouseenter', () =>
+            {
+              const popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false }).setLngLat([Number(point.Coordinates?.longitude), Number(point.Coordinates?.latitude)])
+                .setHTML(`<p>Status: ${point.Status}</p><p>Category: ${point.CATEGORY}</p><p>Incident ID: ${point.INCIDENT_ID}</p><p>Points: ${point.Points}</p>
+                <a className="underline text-blue-600" href=${`https://www.google.com/maps/dir/?api=1&destination=${point.Coordinates?.latitude},${point.Coordinates?.longitude}`} target=${`_blank`}>Take me to location</a></div>`).addTo(map);
+              markerElement.addEventListener('mouseleave', () =>
+              {
+                setTimeout(() =>
+                {
+                  popup.remove();
+                }, 1000);
+              });
+            });
         });
       });
 
