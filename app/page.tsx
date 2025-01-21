@@ -86,8 +86,9 @@ function App() {
       <div 
         ref={mapContainerRef}
         style={{ 
-          height: '100%',
-          width: '100%'
+          height: '70%',
+          width: '100%',
+          borderBottom: '2px solid #000'
         }}
       />
       {!mapLoaded && (
@@ -95,6 +96,12 @@ function App() {
           Loading map...
         </div>
       )}
+      <div className='text-center p-4'>
+        <p className='font-bold'>To get started, choose a point on the map.</p>
+        <p>Tap on a point to view more details.</p>
+        <p>Pinch to Zoom.</p>
+
+      </div>
     </div>
   )
 }
